@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How HTTP Works</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header">
+    <div class="container hero">
+      <h1>How HTTP Works</h1>
+      <p class="tagline">Understanding the request-response model of the web.</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="how-http-works.html">How HTTP Works</a></li>
+      <li><a href="http-evolution.html">Evolution</a></li>
+      <li><a href="key-concepts.html">Key Concepts</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main class="container single-column">
+    <section class="card">
+      <h2>HTTP at the Application Layer</h2>
+      <p>
+        HTTP operates at the application layer of the Internet protocol stack. Its job is to define how web clients
+        and web servers communicate. A client, usually a browser, sends an HTTP request asking for a resource such as
+        an HTML page, image, stylesheet, video, or API result. The server receives that request and sends back an
+        HTTP response.
+      </p>
+
+      <h2>The Request-Response Model</h2>
+      <p>
+        The design of HTTP is based on a simple request-response pattern. The client initiates communication by
+        requesting a resource identified by a URL. The server then returns the requested content along with metadata,
+        such as status information and content type.
+      </p>
+
+      <table>
+        <caption>Main Parts of an HTTP Exchange</caption>
+        <tr>
+          <th>Part</th>
+          <th>Meaning</th>
+        </tr>
+        <tr>
+          <td>Client</td>
+          <td>The browser or app requesting information</td>
+        </tr>
+        <tr>
+          <td>Server</td>
+          <td>The system hosting the requested resource</td>
+        </tr>
+        <tr>
+          <td>Request</td>
+          <td>The message asking for a resource</td>
+        </tr>
+        <tr>
+          <td>Response</td>
+          <td>The returned content and related metadata</td>
+        </tr>
+        <tr>
+          <td>URL</td>
+          <td>The address of the requested resource</td>
+        </tr>
+      </table>
+
+      <h2>Why This Model Matters</h2>
+      <p>
+        HTTP started as a way to retrieve basic hypertext documents, but its simple structure allowed it to grow into
+        the protocol used by cloud apps, e-commerce sites, streaming platforms, and APIs. The same basic model still
+        works today, even as the web has become much more advanced.
+      </p>
+
+      <h3>Common Resources Sent with HTTP</h3>
+      <ul>
+        <li>HTML documents</li>
+        <li>CSS files</li>
+        <li>JavaScript files</li>
+        <li>Images and video</li>
+        <li>API data in JSON or XML</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>This website was created as a class project for IT 3203 Web Development at Kennesaw State University.</p>
+    <p><a href="https://ksuweb.github.io/IT3203/">Visit the IT 3203 class website</a></p>
+  </footer>
+</body>
+</html>
