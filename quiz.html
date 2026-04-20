@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTTP Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header id="site-header">
+  <div class="container hero">
+    <h1>HTTP Knowledge Quiz</h1>
+    <p class="tagline">Test your understanding of HTTP concepts.</p>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <ul class="nav-list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="how-http-works.html">How HTTP Works</a></li>
+    <li><a href="http-evolution.html">Evolution</a></li>
+    <li><a href="key-concepts.html">Key Concepts</a></li>
+    <li><a href="references.html">References</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+  </ul>
+</nav>
+
+<main class="container single-column">
+
+<form id="quizForm" class="card">
+
+<h2>Quiz</h2>
+
+<!-- Q1 -->
+<p>1. HTTP stands for:</p>
+<input type="text" id="q1">
+<p id="q1-result"></p>
+
+<!-- Q2 -->
+<p>2. Which protocol is secure HTTP?</p>
+<label><input type="radio" name="q2" value="a"> FTP</label><br>
+<label><input type="radio" name="q2" value="b"> HTTPS</label><br>
+<label><input type="radio" name="q2" value="c"> SMTP</label>
+<p id="q2-result"></p>
+
+<!-- Q3 -->
+<p>3. HTTP uses which model?</p>
+<label><input type="radio" name="q3" value="a"> Peer-to-peer</label><br>
+<label><input type="radio" name="q3" value="b"> Request-response</label><br>
+<label><input type="radio" name="q3" value="c"> Blockchain</label>
+<p id="q3-result"></p>
+
+<!-- Q4 -->
+<p>4. Which version introduced multiplexing?</p>
+<label><input type="radio" name="q4" value="a"> HTTP/1.0</label><br>
+<label><input type="radio" name="q4" value="b"> HTTP/1.1</label><br>
+<label><input type="radio" name="q4" value="c"> HTTP/2</label>
+<p id="q4-result"></p>
+
+<!-- Q5 -->
+<p>5. Select all features of HTTP/2:</p>
+<label><input type="checkbox" value="multiplexing"> Multiplexing</label><br>
+<label><input type="checkbox" value="binary"> Binary framing</label><br>
+<label><input type="checkbox" value="tcp"> Uses TCP per request</label>
+<p id="q5-result"></p>
+
+<br>
+
+<button type="button" onclick="gradeQuiz()">Submit</button>
+<button type="reset" onclick="resetQuiz()">Reset</button>
+
+</form>
+
+<section id="results" class="card"></section>
+
+</main>
+
+<footer>
+  <p>This website was created as a class project for IT 3203 Web Development at Kennesaw State University.</p>
+  <p><a href="https://ksuweb.github.io/IT3203/">Visit the IT 3203 class website</a></p>
+</footer>
+
+<script src="js/quiz.js"></script>
+
+</body>
+</html>
