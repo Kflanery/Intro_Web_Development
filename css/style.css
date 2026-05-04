@@ -36,7 +36,7 @@ nav ul {
   margin: 0;
   padding: 0;
 
-  /* Flexbox layout requirement */
+  /* Flexbox layout */
   display: flex;
   justify-content: center;
 }
@@ -52,7 +52,7 @@ nav a {
   color: white;
 }
 
-/* Hover effect requirement */
+/* Hover effect */
 nav a:hover {
   background-color: #4f7cac;
 }
@@ -62,7 +62,6 @@ nav a:hover {
  MAIN CONTENT AREA
 ================================ */
 
-/* Class selector */
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -76,9 +75,7 @@ nav a:hover {
 section {
   background: white;
   padding: 20px;
-
   margin-bottom: 20px;
-
   border: 1px solid #ddd;
   border-radius: 5px;
 }
@@ -111,8 +108,28 @@ td, th {
 
 img {
   max-width: 100%;
+  height: auto; /* IMPORTANT for responsiveness */
   border: 2px solid #ccc;
   margin-top: 10px;
+}
+
+
+/* ===============================
+ QUIZ / FORM STYLING
+================================ */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, label {
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
 }
 
 
@@ -136,4 +153,67 @@ footer {
 #highlight {
   color: #1f3c5b;
   font-weight: bold;
+}
+
+
+/* ===============================
+ RESPONSIVE DESIGN - TABLET
+================================ */
+
+@media (max-width: 768px) {
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ===============================
+ RESPONSIVE DESIGN - MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav a {
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
 }

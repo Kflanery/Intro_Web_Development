@@ -6,65 +6,95 @@
   <title>Key Concepts</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header id="site-header">
     <div class="container hero">
       <h1>Key Concepts</h1>
-      <p class="tagline">Important ideas connected to HTTP and modern web communication.</p>
+      <p class="tagline">
+        Important ideas connected to HTTP and modern web communication.
+      </p>
     </div>
   </header>
 
+  <!-- NAVIGATION -->
   <nav class="main-nav">
     <ul class="nav-list">
       <li><a href="index.html">Home</a></li>
       <li><a href="how-http-works.html">How HTTP Works</a></li>
       <li><a href="http-evolution.html">Evolution</a></li>
-      <li><a href="key-concepts.html">Key Concepts</a></li>
+      <li><a href="key-concepts.html" class="active">Key Concepts</a></li>
       <li><a href="references.html">References</a></li>
       <li><a href="about.html">About</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
     </ul>
   </nav>
 
-  <main class="container single-column concepts-grid">
+  <!-- MAIN CONTENT -->
+  <main class="container concepts-grid">
+
     <section class="card concept-box">
-      <h2>1. HTTP</h2>
-      <p>HTTP stands for Hypertext Transfer Protocol. It defines how web browsers and servers exchange information.</p>
+      <h2>HTTP</h2>
+      <p>
+        Hypertext Transfer Protocol (HTTP) defines how browsers and servers exchange data on the web.
+      </p>
     </section>
 
     <section class="card concept-box">
-      <h2>2. Client-Server Model</h2>
-      <p>A client sends a request and a server returns a response. This is the basic communication model of the web.</p>
+      <h2>Client–Server Model</h2>
+      <p>
+        The client sends a request, and the server responds with data such as web pages or files.
+      </p>
     </section>
 
     <section class="card concept-box">
-      <h2>3. URL</h2>
-      <p>A URL identifies the address of a resource on the web, such as a webpage, image, or API endpoint.</p>
+      <h2>URL</h2>
+      <p>
+        A Uniform Resource Locator (URL) identifies the location of a resource on the internet.
+      </p>
     </section>
 
     <section class="card concept-box">
-      <h2>4. Headers</h2>
-      <p>Headers carry metadata in HTTP messages, such as content type, caching instructions, and browser details.</p>
+      <h2>HTTP Headers</h2>
+      <p>
+        Headers carry metadata such as content type, caching rules, and authentication information.
+      </p>
     </section>
 
     <section class="card concept-box">
-      <h2>5. HTTPS</h2>
-      <p>HTTPS is HTTP secured with TLS encryption, helping protect web traffic from interception and tampering.</p>
+      <h2>HTTPS</h2>
+      <p>
+        HTTPS encrypts HTTP traffic using TLS to protect data from interception and tampering.
+      </p>
     </section>
 
     <section class="card concept-box">
-      <h2>6. Multiplexing</h2>
-      <p>Multiplexing in HTTP/2 allows multiple requests and responses to travel at the same time over one connection.</p>
+      <h2>Multiplexing</h2>
+      <p>
+        HTTP/2 allows multiple requests and responses to be sent simultaneously over a single connection.
+      </p>
     </section>
 
     <section class="card concept-box">
-      <h2>7. QUIC</h2>
-      <p>QUIC is the transport protocol used by HTTP/3. It is built on UDP and is designed to reduce delay and improve reliability.</p>
+      <h2>QUIC Protocol</h2>
+      <p>
+        QUIC is the transport protocol used by HTTP/3, improving speed, reliability, and reducing latency.
+      </p>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <p>This website was created as a class project for IT 3203 Web Development at Kennesaw State University.</p>
-    <p><a href="https://ksuweb.github.io/IT3203/">Visit the IT 3203 class website</a></p>
+    <p>
+      This website was created as a class project for IT 3203 Web Development at Kennesaw State University.
+    </p>
+    <p>
+      <a href="https://ksuweb.github.io/IT3203/">Visit the IT 3203 class website</a>
+    </p>
   </footer>
+
 </body>
 </html>
