@@ -1,3 +1,8 @@
+console.log("quiz.js loaded");
+
+/* ===============================
+   MAIN QUIZ FUNCTION
+================================ */
 function gradeQuiz() {
 
     let score = 0;
@@ -8,7 +13,7 @@ function gradeQuiz() {
 
     if (q1 === "") {
         showResult("q1-result", false, "Please enter an answer");
-    } else if (q1.includes("hypertext transfer protocol")) {
+    } else if (q1.includes("hypertext transfer protocol") || q1.includes("http")) {
         score++;
         showResult("q1-result", true, "Correct");
     } else {
@@ -20,7 +25,7 @@ function gradeQuiz() {
 
     if (!q2) {
         showResult("q2-result", false, "Please select an answer");
-    } else if (q2.value.toUpperCase() === "HTTPS") {
+    } else if (q2.value === "HTTPS") {
         score++;
         showResult("q2-result", true, "Correct");
     } else {
@@ -72,9 +77,38 @@ function gradeQuiz() {
     let passFail = score >= 3 ? "PASS" : "FAIL";
 
     document.getElementById("results").innerHTML = `
-        <h2 style="color:${passFail === "PASS" ? 'green' : 'red'}">
+        <h2 style="color:${passFail === "PASS" ? "green" : "red"}">
             ${passFail}
         </h2>
         <p><strong>Score:</strong> ${score}/${total}</p>
     `;
+}
+
+
+
+function showResult(id, correct, message) {
+    const element = document.getElementById(id);
+
+    if (!element) return;
+
+    element.textContent = message;
+    element.style.color = correct ? "green" : "red";
+}
+
+
+/* ===============================
+   RESET QUIZ
+================================ */
+function resetQuiz() {
+
+    document.getElementById("results").innerHTML = "";
+
+    document.querySelectorAll("p[id$='-result']").forEach(p => {
+        p.textContent = "";
+    });
+
+    document.getElementById("q1").value = "";
+
+    document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+    document.querySelectorAll('input[type="checkbox"]').forEach(c => c.checked = false);
 }
